@@ -1,0 +1,10 @@
+.btns{
+    margin-top: 4vh;
+    height: 6vh;
+    width: 10vw;
+    background-color: tomato;
+    border: none;
+    border-radius: 7px;
+    color: aliceblue;
+    font-size: medium;
+}

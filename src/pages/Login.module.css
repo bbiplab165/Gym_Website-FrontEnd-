@@ -1,0 +1,31 @@
+.main_login{
+    /* border: 1px solid red; */
+    margin-top: 5em;
+    margin-bottom: 5em;
+    height: 350px;
+    width: 400px;
+    text-align: center;
+    margin-left: 30%;
+    background-color: azure;
+    box-shadow: 2px 2px 10px rgb(198, 186, 186);
+    border-radius: 10px;
+}
+.main_login input{
+    width: 25vw;
+    height: 5vh;
+    margin: 1em;
+    padding: 5px;
+    border-radius: 10px;
+    
+}
+.btn{
+    background-color: tomato;
+    width: 10vw;
+    height: 6vh;
+    border: none;
+    color: azure;
+    font-size: medium;
+    border-radius: 10px;
+    margin-top: 1em;
+    cursor: pointer;
+}
