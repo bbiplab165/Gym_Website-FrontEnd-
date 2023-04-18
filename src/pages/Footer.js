@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import { Link } from 'react-router-dom';
 import Style from './Footer.module.css'
 
 export default function Footer() {
@@ -8,7 +9,7 @@ export default function Footer() {
     <div className={Style.bkimg}>
     <div className={Style.main_footer}>
       <div className={Style.leftside}>
-        <h1>GYM</h1>
+        <Link to='/'><h1>GYM</h1></Link>
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam, culpa.</p>
         <h2>logos</h2>
       </div>

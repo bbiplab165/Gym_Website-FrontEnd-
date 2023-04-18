@@ -26,6 +26,7 @@
     font-size: medium;
     cursor: pointer;
 }
-.logo{
+.logo h1{
     color:  red;
+    list-style: none;
 }

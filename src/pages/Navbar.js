@@ -7,14 +7,16 @@ export default function Navbar() {
   return (
     <div className={Style.main_Navdiv}>
         <div className={Style.logo}> 
-            <h1>GYM</h1>
+            <Link to='/'> <h1>GYM</h1> </Link>
         </div>
     <div >
       <ul className={Style.link_div}>
-        <Link to='/'> <li>Home</li></Link>
+        
         <Link to='/aboutUs'><li>About Us</li></Link>
-        <Link to= '/classes'><li>Classes</li></Link>
-        <Link to='/blogs'><li>Blogs</li></Link>
+        <Link to= '/programs'><li>Program</li></Link>
+        <Link to='/training'><li>Training</li></Link>
+        <Link to='/pricing'><li>Pricing</li></Link>
+
       </ul>
     </div>
     <div >
