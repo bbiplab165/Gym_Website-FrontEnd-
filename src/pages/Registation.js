@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import Style from './Login.module.css'
+import { Link } from 'react-router-dom';
+import Style from './Registration.module.css'
 
 function RegistrationPage() {
   const [username, setUsername] = useState('');
@@ -47,22 +48,26 @@ function RegistrationPage() {
 
     localStorage.setItem('users', JSON.stringify(updatedUsers));
 
-    // Redirect to login page or do some other action
-
+    // Redirect to home page 
+    const confirmation = window.confirm('User registered successfully! Click OK to go to home page.');
+    if (confirmation) {
+      window.location.href = '/';
+    }
+    
   }
 
   return (
-    <div>
-      <h1>Registration Page</h1>
+    <div className={Style.RegistrationPage}>
+      <h1>Register </h1>
       <form onSubmit={handleRegistration}>
         <label htmlFor="username">Username:</label>
-        <input type="text" id="username" name="username" value={username} onChange={handleUsernameChange} /><br /><br />
+        <input type="text" id="username" name="username" value={username} onChange={handleUsernameChange} required="true"/><br />
         <label htmlFor="email">Email:</label>
-        <input type="email" id="email" name="email" value={email} onChange={handleEmailChange} /><br /><br />
+        <input type="email" id="email" name="email" value={email} onChange={handleEmailChange}required="true" /><br />
         <label htmlFor="password">Password:</label>
-        <input type="password" id="password" name="password" value={password} onChange={handlePasswordChange} /><br /><br />
+        <input type="password" id="password" name="password" value={password} onChange={handlePasswordChange} required="true"/><br />
         <label htmlFor="confirmPassword">Confirm Password:</label>
-        <input type="password" id="confirmPassword" name="confirmPassword" value={confirmPassword} onChange={handleConfirmPasswordChange} /><br /><br />
+        <input type="password" id="confirmPassword" name="confirmPassword" value={confirmPassword} onChange={handleConfirmPasswordChange} required="true"/><br />
         {registrationError && <p>{registrationError}</p>}
         <button type="submit">Register</button>
       </form>
