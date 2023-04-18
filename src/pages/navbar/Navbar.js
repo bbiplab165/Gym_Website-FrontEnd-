@@ -2,14 +2,15 @@ import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import Style from './Navbar.module.css'
 import {HiMenu,HiMenuAlt3 } from 'react-icons/hi';
-import {FaUser} from 'react-icons/fa'
+// import {FaUser} from 'react-icons/fa';
+
 
 export default function Navbar() {
   const navigate = useNavigate()
   const [isMobile, setIsMobile] = useState(false)
   const isLogin = JSON.parse(localStorage.getItem('logged'));
-  const userName = JSON.parse(localStorage.getItem('users'))
-  console.log(userName.username)
+  // const userName = JSON.parse(localStorage.getItem('users'))
+  // console.log(userName[0].username)
 
   function handleLogout() {
     localStorage.removeItem('logged')
@@ -17,10 +18,10 @@ export default function Navbar() {
   }
   return (
     <div className={Style.main_Navdiv}>
-      <div className={Style.userlogo}>
+      {/* <div className={Style.userlogo}>
         <p><FaUser/></p> 
-        {/* <p>{isLogin ? {userName}}</p> */}
-        </div>
+        
+        </div> */}
       <div className={Style.logo}>
         
         <Link to='/'> <h1>GYM</h1> </Link>
