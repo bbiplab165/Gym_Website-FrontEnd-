@@ -2,9 +2,10 @@ import React from 'react';
 import {Outlet, Navigate} from 'react-router-dom'
 
 export default function ProtectsRoutes() {
-    const isLogin = localStorage.getItem('loggedin')
+    const isLogin = localStorage.getItem('logged') 
   return (
-       isLogin ? <Outlet/> : <Navigate to='/login' />
+    
+       isLogin ?  <Navigate to='/'/> : <Outlet/> 
   )
   
 }

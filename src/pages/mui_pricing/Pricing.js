@@ -18,7 +18,8 @@ const useStyles = makeStyles((theme) => ({
     backgroundImage: 'url("nereus-assets/img/bg/pattern1.png")',
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
-    // height: '40vh'
+    
+    
   },
   cardHeader: {
     paddingTop: theme.spacing(3),

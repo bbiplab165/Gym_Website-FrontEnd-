@@ -9,6 +9,7 @@ import Button from '../../components/Button';
 
 export default function Home() {
   const navigate = useNavigate()
+  const isLogin = localStorage.getItem('logged')
   function handleNavClick() {
     navigate('/registation')
   }
@@ -21,7 +22,7 @@ export default function Home() {
       <div className={Style.homeContent}>
         <h1>IT'S ALL ABOUT WHAT YOU CAN ACHIEVE</h1>
         <span>Empower Yourself to make the changes you need to make </span> <br />
-        <Button onClick={handleNavClick} name='Join With Us' />
+        { isLogin ? <Button name= 'Hello User' /> : <Button onClick={handleNavClick} name='Join With Us' />}
         
       </div>
 

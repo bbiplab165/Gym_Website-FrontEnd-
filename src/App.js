@@ -7,6 +7,8 @@ import Registation from './pages/registration/Registration';
 import Training from './pages/training/Training';
 import Pricing from './pages/mui_pricing/Pricing';
 import AboutUs from './pages/about/AboutUs';
+import ProtectsRoutes from './services/ProtectsRoutes';
+
 
 function App() {
   return (
@@ -18,8 +20,16 @@ function App() {
       <Route path='/programs' element={<Classes/>} />
       <Route path='/training' element={<Training/>} />
       <Route path='/pricing' element={<Pricing/>} />
-      <Route path='/login' element={<Login/>} />
+      
+
+      {/* Protecting Routind =>> */}
+
+      <Route path='/registation' element={<ProtectsRoutes/>}>
       <Route path='/registation' element={<Registation/>} />
+      </Route>
+      <Route path='/login' element={<ProtectsRoutes/>}>
+      <Route path='/login' element={<Login/>} />
+      </Route>
       
     </Routes>
     
