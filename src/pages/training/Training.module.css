@@ -1,0 +1,18 @@
+.container{
+  background-color: #01161e;
+
+}
+.carousel{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.imgContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #edf6f9;
+  width: 80%;
+}

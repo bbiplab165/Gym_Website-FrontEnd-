@@ -1,0 +1,76 @@
+.main_footer{
+    /* border: 2px solid red; */
+    /* margin-top: 2em;  */
+    display: flex;
+    padding: 2rem;
+    gap: 2em;
+   
+}
+.bkimg{
+    background-image: url('C:\Users\adars\OneDrive\Desktop\FuctionUp Projects\FunctionUp_Projects\functionup_projects\src\assets\img_10.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.leftside{
+ width: 50%;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+}
+.leftside p,h2{
+    color: aliceblue;
+    /* font-style:inherit; */
+    /* font-size: 1rem; */
+      margin-left: 1em;
+}
+.leftside h1{
+    color: red;
+}
+/* .table td{
+    color: aliceblue;
+    font-size: large;
+    font-style:italic;
+   
+} */
+/* .table th{
+    color: aliceblue;
+    font-size: large;
+    font-style:italic;
+   
+} */
+.Table{
+    /* border: 2px solid rebeccapurple; */
+    width: 100vw;
+    /* margin-left: 2em; */
+    /* border: 1px solid white; */
+    
+}
+/* .tableData{
+    border: 1px;
+} */
+.copy{
+    color: azure;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+.mediaIcon{
+    display: flex;
+    font-size: 2em;
+    color: tomato;
+    gap: 20px;
+    margin-top: 1.5em;
+    cursor: pointer;
+
+}
+
+table, td, th {  
+    
+    text-align: left;
+    color: aliceblue;
+    text-align: center;
+  }
+  th, td {
+    padding: 10px;
+  }

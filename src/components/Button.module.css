@@ -1,10 +1,19 @@
-.btns{
-    margin-top: 4vh;
-    height: 6vh;
-    width: 10vw;
-    background-color: tomato;
-    border: none;
-    border-radius: 7px;
-    color: aliceblue;
-    font-size: medium;
+
+.btns {
+    border: 0;
+    background: tomato;
+    border-radius: 4px;
+    box-shadow: 0 5px 0 tomato;
+    color: #fff;
+    cursor: pointer;
+    font: inherit;
+    margin-top:2rem;
+    outline: 0;
+    padding: 12px 20px;
+    transition: all .1s linear;
+}
+
+.btns:active {
+    box-shadow: 0 2px 0 tomato;
+    transform: translateY(3px);
 }

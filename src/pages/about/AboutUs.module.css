@@ -1,0 +1,68 @@
+.container{
+    height: 200vh;
+    background-image: url('C:\Users\adars\OneDrive\Desktop\FuctionUp Projects\FunctionUp_Projects\functionup_projects\src\assets\img_14.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+} 
+.video_div{
+    display: flex;
+    flex-direction: row;
+    margin: 2rem;
+    color: #adb5bd;
+    gap: 6rem;
+    font-size: large;
+    font-weight: 500;
+    overflow: hidden;
+}
+.video_div h1{
+    color: tomato;
+}
+.video_div span{
+    color:aliceblue;
+}
+
+.about_div{
+    display: flex;
+    flex-direction: row;
+    color: #adb5bd;
+    margin: 2rem;
+    font-size: large;
+    font-weight: 500;
+    overflow: hidden;
+    gap: 6rem;
+    
+}
+.about_div h1{
+    color: tomato;
+}
+.about_div span{
+    color:aliceblue;
+}
+
+
+@media screen and  (max-width: 1020px){
+    .main_aboutdiv{
+        display: block;
+        max-width: 70vw; 
+    }
+    .content{
+        display: block;
+
+    }
+    .video_div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 70%;
+        margin-left: 10em;
+        /* justify-content: center; */
+    }
+    .about_div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 70%;
+        margin-left: 10em;
+    }
+    
+}
