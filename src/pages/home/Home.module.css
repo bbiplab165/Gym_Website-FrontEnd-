@@ -1,7 +1,7 @@
 .homeImg{
     margin: 0;
     padding: 0;
-    background-image: url("C:\Users\adars\OneDrive\Desktop\FuctionUp Projects\FunctionUp_Projects\functionup_projects\src\assets\img_1.jpg");
+    background-image: url("../../assets/img_1.jpg");
     height: 100vh;
     background-size: cover;
     background-repeat: no-repeat;
