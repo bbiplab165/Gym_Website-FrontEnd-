@@ -99,8 +99,9 @@ function RegistrationPage() {
         <label htmlFor="confirmPassword">Confirm Password:</label>
         <input type="password" id="confirmPassword" name="confirmPassword" value={confirmPassword} onChange={handleConfirmPasswordChange} required="true" /><br />
         {registrationError && <p>{registrationError}</p>}
-        < span>Have already an account? <Link to="/login">Login here</Link>.</span>
+        
         <button type="submit">Register</button>
+        < span>Have already an account? <Link to="/login">Login here</Link>.</span>
       </form>
     </div>
   );

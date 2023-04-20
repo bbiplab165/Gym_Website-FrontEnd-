@@ -58,9 +58,12 @@ const Program = () => {
       <Navbar />
       <div className={Style.image_container}>
         <img src={currentImage.url} alt={currentImage.text} />
-        <p>{currentImage.text}</p>
+        <div className={Style.textContent}>
+          <p>{currentImage.text}</p>
+        </div>
+
       </div>
-      <Footer/>
+      <Footer />
     </div>
   );
 };

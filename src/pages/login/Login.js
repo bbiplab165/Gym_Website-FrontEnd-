@@ -52,9 +52,10 @@ function LoginPage() {
           {loginError && <span>{loginError}</span>}
           
           <button type="submit">Login</button>
-
+          
+          < p>Don't have an account? <Link to="/registation">Register here</Link>.</p>
         </form>
-        < p>Don't have an account? <Link to="/registation">Register here</Link>.</p>
+        
       </div>
     </div>
   );

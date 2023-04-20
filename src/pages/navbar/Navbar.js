@@ -4,7 +4,7 @@ import Style from './Navbar.module.css'
 import {HiMenu,HiMenuAlt3 } from 'react-icons/hi';
 // import {FaUser} from 'react-icons/fa';
 
-
+ 
 export default function Navbar() {
   const navigate = useNavigate()
   const [isMobile, setIsMobile] = useState(false)
@@ -45,6 +45,15 @@ export default function Navbar() {
       <div className={Style.menuIcon} >
         {isMobile ? <HiMenuAlt3 onClick={() => setIsMobile(false)} /> : <HiMenu onClick={() => setIsMobile(true)} />}
 
+
+      </div>
+      <div className={ isMobile? Style.mobileLink : Style.hideIcon }>
+        <Link to='/'><p>Home</p></Link>
+        <Link to='/aboutUs'><p>AboutUs</p></Link>
+        <Link to='/programs'><p>Program</p></Link>
+        <Link to='/training'><p>Training</p></Link>
+        <Link to='/pricing'><p>Pricing</p></Link>
+        <Link to='/login'><p>Login</p></Link>
 
       </div>
 
