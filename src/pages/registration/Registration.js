@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link,useNavigate } from 'react-router-dom';
 import Style from './Registration.module.css'
 
 
 
 function RegistrationPage() {
+  const navigate =useNavigate()
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -12,11 +13,11 @@ function RegistrationPage() {
   const [registrationError, setRegistrationError] = useState('');
   const [EM, setEM] = useState('');
   const [PW, setPW] = useState('');
-  
+
 
   function handleUsernameChange(event) {
     setUsername(event.target.value);
-    
+
   }
 
   function handleEmailChange(event) {
@@ -24,7 +25,7 @@ function RegistrationPage() {
     const regEmail = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
     if (regEmail.test(email)) {
       setEM('');
-    } else if(!regEmail.test(email) && email !== ""){
+    } else if (!regEmail.test(email) && email !== "") {
       setEM("Email is Not Valid");
     }
   }
@@ -34,10 +35,10 @@ function RegistrationPage() {
     const pwRegEx = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).{6,20}$/;
     if (pwRegEx.test(password)) {
       setPW('');
-    } else if(!pwRegEx.test(password) && password !== " "){
+    } else if (!pwRegEx.test(password) && password !== " ") {
       setPW("password is Not Valid");
-    
-    } else  {
+
+    } else {
       setPW('');
     }
   }
@@ -70,14 +71,14 @@ function RegistrationPage() {
     localStorage.setItem('users', JSON.stringify(updatedUsers));
 
     // Redirect to home page 
-    if(EM ==="Email is Not Valid" || PW === "password is Not Valid" ){
+    if (EM === "Email is Not Valid" || PW === "password is Not Valid") {
       alert("you have enter wrong details")
-    } else{
-   
-    const confirmation = window.confirm('Registration successfully Done! Click OK to go to Login page.');
-    if (confirmation) {
-      window.location.href = '/login';
-    }
+    } else {
+
+      const confirmation = window.confirm('Registration successfully Done! Click OK to go to Login page.');
+      if (confirmation) {
+        navigate('/login');
+      }
     }
 
   }
@@ -85,13 +86,13 @@ function RegistrationPage() {
   return (
     <div className={Style.RegistrationPage}>
       <div className={Style.leftDiv}>
-        <img src='https://trumpwallpapers.com/wp-content/uploads/Workout-Wallpaper-01-1600-x-843.jpg' alt='wallpaper'/>
+        <img src='https://trumpwallpapers.com/wp-content/uploads/Workout-Wallpaper-01-1600-x-843.jpg' alt='wallpaper' />
       </div>
 
       <form onSubmit={handleRegistration} className={Style.data}>
-      <h1>Register </h1>
+        <h1>Register </h1>
         <label htmlFor="username">Username:</label>
-        <input type="text" id="username" name="username" value={username} onChange={handleUsernameChange} required="true" /><br /> 
+        <input type="text" id="username" name="username" value={username} onChange={handleUsernameChange} required="true" /><br />
         <label htmlFor="email">Email:</label>
         <input type="email" id="email" name="email" value={email} onChange={handleEmailChange} required="true" /><br /> <p>{EM}</p>
         <label htmlFor="password">Password:</label>
@@ -99,7 +100,7 @@ function RegistrationPage() {
         <label htmlFor="confirmPassword">Confirm Password:</label>
         <input type="password" id="confirmPassword" name="confirmPassword" value={confirmPassword} onChange={handleConfirmPasswordChange} required="true" /><br />
         {registrationError && <p>{registrationError}</p>}
-        
+
         <button type="submit">Register</button>
         < span>Have already an account? <Link to="/login">Login here</Link>.</span>
       </form>
