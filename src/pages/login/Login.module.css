@@ -1,11 +1,20 @@
-*{
-    margin: 0;
-    padding: 0;
+.main_div{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
 }
 .container{
+    width: 40%;
     display: flex;
     flex-direction: row;
+    align-items: center;
+    justify-content: center;
     height: 100vh;
+    background-color: #000;
+   
+}
+.leftDiv{
+    width: 60%;
 }
 .leftDiv img{
    width: 100%;
@@ -18,21 +27,22 @@
     justify-content: center;
     height: 100vh;
     width: 50%;
-    background-color: #000;
+    
 }
 
 .data {
     display: flex;
     flex-direction: column;
-    /* align-items: center; */
     justify-content: center;
-    width: 50%;
-    margin-right: 2rem;
+    width: 100%;
+    /* margin-right: 2rem; */
     background-color: transparent;
     border-radius: 0.5rem solid black;
     box-shadow: 0 0.25rem 0.5rem rgba(6, 1, 1, 0.3);
+    
 }
 .container h1 {
+    color: whitesmoke;
     font-size: 2rem;
     margin-right: 2.5rem;
     margin-bottom: 2rem;
@@ -46,10 +56,9 @@
 
 .container input {
        
- height: 2.5rem;
+
  width: 20vw;
  margin-top: 0.5rem;
- margin-bottom: 2rem;
  border: none;
  border-radius: 6px;
  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
@@ -57,8 +66,8 @@
 
 .container button {
  
-    height: 3rem;
-    width: 6rem;
+
+    width: 6em;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -67,28 +76,26 @@
     box-shadow: 0 5px 0 #240046;
     color: #eae2b7;
     text-shadow: 0 0.2px 0.5px #000;
-    font-size: large;
     font-weight: bold;
     cursor: pointer;
     outline: 0;
     padding: 12px 20px ;
     transition: all .1s linear;
-   margin-bottom: 3rem;
+   margin-left: 0;
     
 }
 .data p{
     font-size: 1rem;
     margin: 0;
-    /* font-weight: 400;
-    color: white;
-     text-align: center; */
+    
+  
 }
 .link{
     color: lightgreen;
 }
 
 .container button:hover {
-    background-color:tomato;
+    background-color:green;
 }
 .container span{
     margin-bottom: 10px;

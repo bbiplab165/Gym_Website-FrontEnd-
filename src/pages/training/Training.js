@@ -9,18 +9,7 @@ const Training = () => {
       url: 'https://img2.wallspic.com/previews/1/0/0/1/31001/31001-bodybuilder-arm-strength_training-male-fitness_centre-x750.jpg',
       name: 'Strngth Training'
     },
-    // {
-    //   url: 'https://media.istockphoto.com/id/655781960/photo/determined-male-working-out-in-gym-lifting-weights.jpg?s=612x612&w=0&k=20&c=k9C0fgbVHYxiQLe8hckSx9OqAEaGVUfiVXYq8JGxhoE=',
-    //   name: 'lio'
-    // },
-    // {
-    //   url: 'https://media.istockphoto.com/id/655781960/photo/determined-male-working-out-in-gym-lifting-weights.jpg?s=612x612&w=0&k=20&c=k9C0fgbVHYxiQLe8hckSx9OqAEaGVUfiVXYq8JGxhoE=',
-    //   name: 'lio'
-    // },
-    // {
-    //   url: 'https://media.istockphoto.com/id/655781960/photo/determined-male-working-out-in-gym-lifting-weights.jpg?s=612x612&w=0&k=20&c=k9C0fgbVHYxiQLe8hckSx9OqAEaGVUfiVXYq8JGxhoE=',
-    //   name: 'lio'
-    // },
+    
     {
       url: 'https://media.istockphoto.com/id/655781960/photo/determined-male-working-out-in-gym-lifting-weights.jpg?s=612x612&w=0&k=20&c=k9C0fgbVHYxiQLe8hckSx9OqAEaGVUfiVXYq8JGxhoE=',
       name: 'lio'
@@ -39,21 +28,25 @@ const Training = () => {
     }
   ]
   const [index, setIndex] = useState(0);
-  const length = photos.length;
+  const length = photos.length ;
+  console.log(length)
 
   const handlePrevious = () => {
-    const newIndex = index - 1;
-    setIndex(newIndex < 0 ? length - 1 : newIndex);
+    setIndex(index>0 ? index-1 : length-1 )
   };
 
   const handleNext = () => {
-    const newIndex = index + 1;
-    setIndex(newIndex >= length ? 0 : newIndex);
+    // const newIndex = index + 1;
+    // setIndex(newIndex >= length ? 0 : newIndex);
+    setIndex(index<length-1 ? index+1 : 0)
+    
   };
 
   return (
+    <>
+    
     <div className={Style.container}>
-      <Navbar />
+    <Navbar />
       <div className={Style.carousel}>
         <button onClick={handlePrevious}><FaLessThan /></button>
         <div className={Style.imgContainer}>
@@ -64,6 +57,7 @@ const Training = () => {
       </div>
       <Footer />
     </div>
+    </>
   );
 };
 

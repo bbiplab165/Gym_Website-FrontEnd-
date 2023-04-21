@@ -5,7 +5,7 @@ import Classes from './pages/program/Program';
 import Login from './pages/login/Login';
 import Registation from './pages/registration/Registration';
 import Training from './pages/training/Training';
-import Pricing from './pages/mui_pricing/Pricing';
+import Pricing from './pages/pricing/Pricing';
 import AboutUs from './pages/about/AboutUs';
 import ProtectsRoutes from './services/ProtectsRoutes';
 
@@ -27,6 +27,7 @@ function App() {
       <Route path='/registation' element={<ProtectsRoutes/>}>
       <Route path='/registation' element={<Registation/>} />
       </Route>
+      
       <Route path='/login' element={<ProtectsRoutes/>}>
       <Route path='/login' element={<Login/>} />
       </Route>

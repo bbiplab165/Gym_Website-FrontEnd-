@@ -17,6 +17,7 @@ export default function Navbar() {
     navigate('/login')
   }
   return (
+  <>
     <div className={Style.main_Navdiv}>
       {/* <div className={Style.userlogo}>
         <p><FaUser/></p> 
@@ -26,9 +27,9 @@ export default function Navbar() {
 
         <Link to='/' style={{ textDecoration: 'none' }}> <h1>GYM</h1> </Link>
       </div>
-      <div className={isMobile ? Style.icon : Style.hideIcon}>
+      {/* <div className={isMobile ? Style.icon : Style.hideIcon}>
         <h1> NGE<span>GYM</span>💪 </h1>
-      </div>
+      </div> */}
       <div >
         <ul className={Style.link_div} >
 
@@ -44,10 +45,13 @@ export default function Navbar() {
       </div>
       <div className={Style.menuIcon} >
         {isMobile ? <HiMenuAlt3 onClick={() => setIsMobile(false)} /> : <HiMenu onClick={() => setIsMobile(true)} />}
-
+ 
 
       </div>
-      <div className={isMobile ? Style.mobileLink : Style.hideIcon}>
+      
+
+    </div>
+    <div className={isMobile ? Style.mobileLink : Style.hideIcon}>
         <div>
           <Link to='/' style={{ textDecoration: 'none' }}><p>Home</p></Link>
           <Link to='/aboutUs' style={{ textDecoration: 'none' }}><p>AboutUs</p></Link>
@@ -57,7 +61,6 @@ export default function Navbar() {
           <Link to='/login' style={{ textDecoration: 'none' }}><p>Login</p></Link>
         </div>
       </div>
-
-    </div>
+    </>
   )
 }

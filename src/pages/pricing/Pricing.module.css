@@ -1,0 +1,112 @@
+.main_div{
+  text-align: center;
+  background-image: url("https://media.istockphoto.com/id/875207140/photo/sport-background-with-fitness-equipment-in-gym-gym.jpg?s=612x612&w=0&k=20&c=VEpZIAJ3wdlwHwvWuLumDmpsWczobiSH5kL981H5Cvk=");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+.p_table{
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    
+}
+.content{
+    padding: 2em;
+}
+.content h1 {
+    color: whitesmoke;
+}
+.content p{
+    color: whitesmoke;
+}
+.content span{
+    color: rgb(65, 65, 171);
+    font-size: 1.5em;
+}
+.div_1, .div_2, .div_3 {
+  
+    border-radius: 5px;
+    padding: 1em 0px;
+    margin: 1em;
+    width: 20vw;
+    background-color:whitesmoke;
+    box-shadow: 0px 0px 10px 3px lightgray;
+}
+.p_table :hover{
+    background-color: blue;
+}
+
+.p_table :hover h2{
+    color: tomato;
+}
+.p_table :hover button{
+    background-color: white;
+    color: blue;
+}
+.div_1, .div_2, button{
+    padding: .5em;
+    margin: 2em;
+    border-radius: 4px;
+    border: none;
+}
+.div_3, button{
+    padding: .5em;
+    margin: 2em;
+    border-radius: 4px;
+    border: none;
+}
+
+.div_1 button:hover {
+    background-color:rgb(68, 53, 122);
+    color: white;
+}
+.div_2 button:hover {
+    background-color:rgb(68, 53, 122);
+    color: white;
+}
+.div_3 button:hover {
+    background-color:rgb(68, 53, 122);
+    color: white;
+}
+.div_1 h2{
+    color: rgb(15, 15, 181);
+}
+.div_2 h2{
+    color: rgb(15, 15, 181);
+}
+.div_3 h2{
+    color: rgb(15, 15, 181);
+}
+.div_1 span{
+    font-family:'Times New Roman', Times, serif ;
+}
+.div_2 span{
+    font-family:'Times New Roman', Times, serif ;
+}
+.div_3 span{
+    font-family:'Times New Roman', Times, serif ;
+}
+
+
+@media only screen and  (max-width: 750px ){
+
+    .p_table{
+        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+       
+    }
+    .div_3, .div_2, .div_1{
+        
+        width: 70%;
+        text-align: center;
+        padding: 0;
+        
+    }
+    .main_div{
+        height: 100%;
+    }
+    
+}

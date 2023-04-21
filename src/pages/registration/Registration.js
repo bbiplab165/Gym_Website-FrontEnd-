@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import { Link,useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Style from './Registration.module.css'
 
 
 
 function RegistrationPage() {
-  const navigate =useNavigate()
+  const navigate = useNavigate()
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -36,7 +36,7 @@ function RegistrationPage() {
     if (pwRegEx.test(password)) {
       setPW('');
     } else if (!pwRegEx.test(password) && password !== " ") {
-      setPW("password is Not Valid");
+      setPW("Password must be min one Capital letter,min one digit & min 6 letter");
 
     } else {
       setPW('');
@@ -84,26 +84,32 @@ function RegistrationPage() {
   }
 
   return (
-    <div className={Style.RegistrationPage}>
+    <div className={Style.main_div}>
       <div className={Style.leftDiv}>
         <img src='https://trumpwallpapers.com/wp-content/uploads/Workout-Wallpaper-01-1600-x-843.jpg' alt='wallpaper' />
       </div>
 
-      <form onSubmit={handleRegistration} className={Style.data}>
-        <h1>Register </h1>
-        <label htmlFor="username">Username:</label>
-        <input type="text" id="username" name="username" value={username} onChange={handleUsernameChange} required="true" /><br />
-        <label htmlFor="email">Email:</label>
-        <input type="email" id="email" name="email" value={email} onChange={handleEmailChange} required="true" /><br /> <p>{EM}</p>
-        <label htmlFor="password">Password:</label>
-        <input type="password" id="password" name="password" value={password} onChange={handlePasswordChange} required="true" /><br /> <p>{PW}</p>
-        <label htmlFor="confirmPassword">Confirm Password:</label>
-        <input type="password" id="confirmPassword" name="confirmPassword" value={confirmPassword} onChange={handleConfirmPasswordChange} required="true" /><br />
-        {registrationError && <p>{registrationError}</p>}
+      <div className={Style.RegistrationPage}>
+       
 
-        <button type="submit">Register</button>
-        < span>Have already an account? <Link to="/login">Login here</Link>.</span>
-      </form>
+        <form onSubmit={handleRegistration} className={Style.data}>
+          <h1>Register </h1>
+          <label htmlFor="username">Username:</label>
+          <input type="text" id="username" name="username" value={username} onChange={handleUsernameChange} required="true" /><br />
+          <label htmlFor="email">Email:</label>
+          <input type="email" id="email" name="email" value={email} onChange={handleEmailChange} required="true" /><br /> <p>{EM}</p>
+          <label htmlFor="password">Password:</label>
+          <input type="password" id="password" name="password" value={password} onChange={handlePasswordChange} required="true" /><br /> <p>{PW}</p>
+          <label htmlFor="confirmPassword">Confirm Password:</label>
+          <input type="password" id="confirmPassword" name="confirmPassword" value={confirmPassword} onChange={handleConfirmPasswordChange} required="true" /><br />
+          {registrationError && <p>{registrationError}</p>}
+
+          <button type="submit">Register</button>
+          < span>Have already an account? <Link to="/login">Login here</Link>.</span>
+
+        </form>
+        
+      </div>
     </div>
   );
 }
