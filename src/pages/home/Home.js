@@ -11,7 +11,7 @@ export default function Home() {
   const navigate = useNavigate()
   const isLogin = localStorage.getItem('logged')
   function handleNavClick() {
-    navigate('/registation')
+    navigate('/registration')
   }
 
   return (

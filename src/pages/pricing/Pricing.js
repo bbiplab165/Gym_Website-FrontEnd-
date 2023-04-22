@@ -9,6 +9,7 @@ export default function Pricing() {
     const isLogin = localStorage.getItem("logged")
 
     function handleSubsription(){
+        // localStorage.setItem("subscribed", JSON.parse(true))
         alert('You have subscribed our Weekend plan ')
     }
     function handleSubsriptionM(){

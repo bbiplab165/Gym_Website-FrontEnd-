@@ -11,21 +11,24 @@ export default function Navbar() {
   const isLogin = JSON.parse(localStorage.getItem('logged'));
   // const userName = JSON.parse(localStorage.getItem('users'))
   // console.log(userName[0].username)
-
+  // const isSubscribe = localStorage.getItem('subscribed')
   function handleLogout() {
     localStorage.removeItem('logged')
+   localStorage.removeItem('subscribed')
     navigate('/login')
+   
+
   }
   return (
   <>
     <div className={Style.main_Navdiv}>
       {/* <div className={Style.userlogo}>
-        <p><FaUser/></p> 
+        <p>{isSubscribe? 'Weekend Pass' : ''}</p> 
         
         </div> */}
       <div className={Style.logo}>
 
-        <Link to='/' style={{ textDecoration: 'none' }}> <h1>GYM</h1> </Link>
+        <Link to='/' style={{ textDecoration: 'none' }}> <h1>GYM  </h1> </Link>
       </div>
       {/* <div className={isMobile ? Style.icon : Style.hideIcon}>
         <h1> NGE<span>GYM</span>💪 </h1>

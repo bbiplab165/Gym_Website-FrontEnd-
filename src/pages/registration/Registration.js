@@ -77,6 +77,10 @@ function RegistrationPage() {
 
       const confirmation = window.confirm('Registration successfully Done! Click OK to go to Login page.');
       if (confirmation) {
+        setUsername('')
+        setEmail('')
+        setPassword('')
+        setConfirmPassword('')
         navigate('/login');
       }
     }

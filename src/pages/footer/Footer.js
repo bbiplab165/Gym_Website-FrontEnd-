@@ -1,6 +1,7 @@
 import React from 'react'
 import Style from './Footer.module.css'
 import {BsFacebook,BsInstagram,BsTwitter} from 'react-icons/bs';
+import { Link } from 'react-router-dom';
 
 export default function Footer() {
   return (
@@ -11,9 +12,9 @@ export default function Footer() {
             <h1>GYM</h1>
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam, culpa.</p>
             <div className={Style.mediaIcon}>
-              <a href="https://www.facebook.com/" target='blank'><span><BsFacebook/></span></a>
-              <a href="https://www.instagram.com/" target='blank'><span><BsInstagram/></span></a>
-              <a href="https://twitter.com/i/flow/login" target='blank'><span><BsTwitter/></span></a>
+              <Link to="https://www.facebook.com/" target='blank'><span><BsFacebook/></span></Link>
+              <Link to="https://www.instagram.com/" target='blank'><span><BsInstagram/></span></Link>
+              <Link to="https://twitter.com/i/flow/login" target='blank'><span><BsTwitter/></span></Link>
        
         </div>
           </div>
