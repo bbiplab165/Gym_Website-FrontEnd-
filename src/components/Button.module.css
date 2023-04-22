@@ -3,7 +3,7 @@
     border: 0;
     background: tomato;
     border-radius: 4px;
-    box-shadow: 0 5px 0 tomato;
+    /* box-shadow: 0 5px 0 tomato; */
     color: #fff;
     cursor: pointer;
     font: inherit;

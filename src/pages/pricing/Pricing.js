@@ -2,8 +2,21 @@ import React from 'react';
 import Style from './Pricing.module.css'
 import Navbar from '../navbar/Navbar';
 import Footer from '../footer/Footer';
+import {useNavigate} from 'react-router-dom'
 
 export default function Pricing() {
+    const navigate = useNavigate()
+    const isLogin = localStorage.getItem("logged")
+
+    function handleSubsription(){
+        alert('You have subscribed our Weekend plan ')
+    }
+    function handleSubsriptionM(){
+        alert('You have subscribed our Monthly plan ')
+    }
+    function handleSubsriptionY(){
+        alert('You have subscribed our Yearly plan ')
+    }
     return (
         <>
         <Navbar/>
@@ -19,7 +32,7 @@ export default function Pricing() {
                     <span>Unlimited Yoga Classes</span> <br />
                     <span>Aerobics</span> <br />
                     <span>Strength Training</span> <br />
-                    <button>SELECT PLAN</button>
+                   { isLogin ? <button onClick={handleSubsription}>SELECT PLAN</button> : <button onClick={()=> navigate('/login')}>SELECT PLAN</button>}
                 </div>
                 <div className={Style.div_2}>
                     <h1>Monthly Pass</h1>
@@ -27,7 +40,7 @@ export default function Pricing() {
                     <span>Unlimited Yoga Classes</span>  <br />
                     <span>Aerobics, Dance</span>  <br />
                     <span>Strength & CrossFit Training</span>  <br />
-                    <button>SELECT PLAN</button>
+                    { isLogin ? <button onClick={handleSubsriptionM}>SELECT PLAN</button> : <button onClick={()=> navigate('/login')}>SELECT PLAN</button>}
                 </div>
                 <div className={Style.div_3}>
                     <h1>Yearly Pass</h1>
@@ -35,7 +48,7 @@ export default function Pricing() {
                     <span>Unlimited Yoga Classes</span>  <br />
                     <span>Aerobics, Dance, Jujutsu</span>  <br />
                     <span>Strength Training & CrossFit Training</span>  <br />
-                    <button>SELECT PLAN</button>
+                    { isLogin ? <button onClick={handleSubsriptionY}>SELECT PLAN</button> : <button onClick={()=> navigate('/login')}>SELECT PLAN</button>}
                 </div>
             </div>
         </div>
