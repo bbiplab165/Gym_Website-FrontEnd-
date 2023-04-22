@@ -11,9 +11,10 @@ export default function Footer() {
             <h1>GYM</h1>
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam, culpa.</p>
             <div className={Style.mediaIcon}>
-        <span><BsFacebook/></span>
-        <span><BsInstagram/></span>
-        <span><BsTwitter/></span>
+              <a href="https://www.facebook.com/" target='blank'><span><BsFacebook/></span></a>
+              <a href="https://www.instagram.com/" target='blank'><span><BsInstagram/></span></a>
+              <a href="https://twitter.com/i/flow/login" target='blank'><span><BsTwitter/></span></a>
+       
         </div>
           </div>
           <div className={Style.Table}>
