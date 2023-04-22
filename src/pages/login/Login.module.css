@@ -60,6 +60,7 @@
     border: none;
     cursor: pointer;
     margin-bottom: 20px;
+    width: 300px;
 }
 
 .loginButton:hover {
