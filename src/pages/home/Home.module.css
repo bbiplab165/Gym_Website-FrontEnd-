@@ -18,7 +18,7 @@
     margin-left: 0;
     flex-direction: column;
     padding: 2em;
-    border:  2px red solid;
+    /* border:  2px red solid; */
 }
 hr{
     color: red;
