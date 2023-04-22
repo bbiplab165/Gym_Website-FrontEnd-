@@ -39,7 +39,7 @@ function RegistrationPage() {
       setPW("Password must be min one Capital letter,min one digit & min 6 letter");
 
     } else {
-      setPW('');
+      setPW(''); 
     }
   }
 

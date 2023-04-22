@@ -1,76 +1,58 @@
-.main_footer{
-    /* border: 2px solid red; */
-    /* margin-top: 2em;  */
+.main_div{
     display: flex;
-    padding: 2rem;
-    gap: 2em;
+    justify-content: space-around;
+    /* border: 2px red solid; */
+    width: 100%;
+    height: 60vh;
+    
    
 }
-.bkimg{
+.bg{
     background-image: url('../../assets/img_10.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-}
-.leftside{
- width: 50%;
- display: flex;
- flex-direction: column;
- align-items: center;
-}
-.leftside p,h2{
-    color: aliceblue;
-    /* font-style:inherit; */
-    /* font-size: 1rem; */
-      margin-left: 1em;
-}
-.leftside h1{
-    color: red;
-}
-/* .table td{
-    color: aliceblue;
-    font-size: large;
-    font-style:italic;
-   
-} */
-/* .table th{
-    color: aliceblue;
-    font-size: large;
-    font-style:italic;
-   
-} */
-.Table{
-    /* border: 2px solid rebeccapurple; */
-    width: 100vw;
-    /* margin-left: 2em; */
-    /* border: 1px solid white; */
     
 }
-/* .tableData{
-    border: 1px;
-} */
-.copy{
-    color: azure;
+.logo{
+    width: 20%;
+    
+}
+.table{
+    /* border: 2px red solid; */
+    text-align: center;
     display: flex;
-    justify-content: center;
-    margin: 0;
-    padding: 0;
+    flex-direction: column;
+    /* align-items: flex-start; */
+    /* justify-content: flex-start; */
+    width: 15%;
+    padding: 1em;
+    margin: .5em;
+    height: auto;
+    
+}
+.logo h1{
+    color: red;
+}
+.table p{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.table span{
+    font-size: 15px;
+    font-weight: bold;
+    color: red;
 }
 .mediaIcon{
     display: flex;
     font-size: 2em;
     color: tomato;
     gap: 20px;
-    margin-top: 1.5em;
+    margin: 1.5em;
     cursor: pointer;
 
 }
-
-table, td, th {  
+.copy {
     
-    text-align: left;
-    color: aliceblue;
-    text-align: center;
-  }
-  th, td {
-    padding: 10px;
-  }
+    height: 50px;
+  
+   
+}

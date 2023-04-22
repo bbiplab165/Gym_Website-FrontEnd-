@@ -51,7 +51,7 @@ export default function Pricing() {
                     <span>Strength Training & CrossFit Training</span>  <br />
                     { isLogin ? <button onClick={handleSubsriptionY}>SELECT PLAN</button> : <button onClick={()=> navigate('/login')}>SELECT PLAN</button>}
                 </div>
-            </div>
+            </div>  
         </div>
         <Footer/>
         </>

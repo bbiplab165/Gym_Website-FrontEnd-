@@ -51,17 +51,20 @@ const Program = () => {
       // const currentIndex = images.findIndex((image) => image === currentImage);
       // const nextIndex = (currentIndex + 1) % images.length;
       // setCurrentImage(images[nextIndex]);
-       setIndex(index<length-1 ? index+1 : 0)
+      setIndex(index < length - 1 ? index + 1 : 0)
     }, 2000);
     return () => clearInterval(interval);
-  }, [index]);
+  }, )
 
   return (
-    <div className={Style.container}>
+
+    <div >
       <Navbar />
-      <div className={Style.image_container}>
+      <div className={Style.container}>
         {/* <img src={currentImage.url} alt={currentImage.text} /> */}
-        <img src={images[index].url} alt='hello' />
+        <div className={Style.img_div}>
+          <img src={images[index].url} alt='hello' />
+        </div>
         <div className={Style.textContent}>
           <p>{images[index].text}</p>
         </div>

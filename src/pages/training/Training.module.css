@@ -1,6 +1,6 @@
 .container{
   background-color: #01161e;
-
+ 
 }
 .carousel{
   display: flex;
@@ -20,4 +20,17 @@
   align-items: center;
   color: #edf6f9;
   width: 80%;
+}
+
+@media screen and (max-width: 500px) {
+  .imgContainer{
+    
+    width: 70vw;
+    margin: 0 10px;
+  }
+  .carousel button{
+    
+    width: 35px;
+  }
+  
 }

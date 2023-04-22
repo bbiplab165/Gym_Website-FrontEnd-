@@ -16,17 +16,19 @@ export default function Home() {
 
   return (
     <>
+    <Navbar/>
+    
     <div className={Style.homeImg}>
-      <Navbar/>
-
+    
       <div className={Style.homeContent}>
         <h1>IT'S ALL ABOUT WHAT YOU CAN ACHIEVE</h1>
         <span>Empower Yourself to make the changes you need to make </span> <br />
         { isLogin ? <Button name= 'Hello User' /> : <Button onClick={handleNavClick} name='Join With Us' />}
         
       </div>
-
-    </div>
+     
+    </div> 
+    
     <Footer/>
     </>
   )

@@ -1,68 +1,81 @@
-.container{
-    height: 200vh;
-    background-image: url('../../assets/img_14.jpg');
+.container {
+   
+    width: 100%;
+    height: 100%;
+    background: url('../../assets/img_14.jpg') no-repeat center  fixed;
     background-size: cover;
-    background-repeat: no-repeat;
-} 
-.video_div{
-    display: flex;
-    flex-direction: row;
-    margin: 2rem;
-    color: #adb5bd;
-    gap: 6rem;
-    font-size: large;
-    font-weight: 500;
-    overflow: hidden;
-}
-.video_div h1{
-    color: tomato;
-}
-.video_div span{
-    color:aliceblue;
-}
-
-.about_div{
-    display: flex;
-    flex-direction: row;
-    color: #adb5bd;
-    margin: 2rem;
-    font-size: large;
-    font-weight: 500;
-    overflow: hidden;
-    gap: 6rem;
+    color: #fff;
     
-}
-.about_div h1{
-    color: tomato;
-}
-.about_div span{
-    color:aliceblue;
-}
+  }
+  
+  /* .content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    background-color: rgba(0, 0, 0, 0.7);
+  } */
+  
+  .video_div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+    /* width: 100%; */
+    /* text-align: start; */
+    
+  }
+  .video_content{
+    padding: 1em;
 
+    text-align: center;
+    /* padding: 2em; */
+   
+  }
+  .video_content h1{
+     color: red;
+  }
+  .video_content p{
+     color: whitesmoke;
+  }
 
-@media screen and  (max-width: 1020px){
-    .main_aboutdiv{
-        display: block;
-        max-width: 70vw; 
+  .about_div {
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-between; */
+    /* align-items: center; */
+    margin-bottom: 4em;
+    padding: 1em;
+  }
+  .video{
+    display: flex;
+    justify-content: center;
+  }
+  
+  
+  
+  @media only screen and (max-width: 768px) {
+   
+    
+  
+    .video_div {
+       
+      margin-bottom: 0;
+      display: flex;
+      flex-direction: column;
     }
-    .content{
-        display: block;
-
-    }
-    .video_div{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 70%;
-        margin-left: 10em;
-        /* justify-content: center; */
-    }
+    
     .about_div{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 70%;
-        margin-left: 10em;
+       
+     
+      flex-direction: column;
+      
     }
+  
     
-}
+  }
+  
+  

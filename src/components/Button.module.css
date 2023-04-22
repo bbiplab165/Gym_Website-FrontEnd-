@@ -18,3 +18,12 @@
     box-shadow: 0 2px 0 tomato;
     transform: translateY(3px);
 }
+
+@media screen and (max-width: 500px) {
+    .btns{
+          font-size: x-small;
+          height: fit-content;
+          width: 30vw;
+         
+    }
+}

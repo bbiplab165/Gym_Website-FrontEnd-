@@ -29,7 +29,7 @@ const Training = () => {
   ]
   const [index, setIndex] = useState(0);
   const length = photos.length ;
-  console.log(length)
+  
 
   const handlePrevious = () => {
     setIndex(index>0 ? index-1 : length-1 )
@@ -44,9 +44,9 @@ const Training = () => {
 
   return (
     <>
-    
-    <div className={Style.container}>
     <Navbar />
+    <div className={Style.container}>
+    
       <div className={Style.carousel}>
         <button onClick={handlePrevious}><FaLessThan /></button>
         <div className={Style.imgContainer}>
@@ -55,8 +55,9 @@ const Training = () => {
         </div>
         <button onClick={handleNext}><FaGreaterThan /></button>
       </div>
-      <Footer />
+       
     </div>
+    <Footer />
     </>
   );
 };
