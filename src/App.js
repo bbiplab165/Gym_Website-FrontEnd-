@@ -24,8 +24,8 @@ function App() {
 
       {/* Protecting Routind =>> */}
 
-      <Route path='/registation' element={<ProtectsRoutes/>}>
-      <Route path='/registation' element={<Registation/>} />
+      <Route path='/registration' element={<ProtectsRoutes/>}>
+      <Route path='/registration' element={<Registation/>} />
       </Route>
       
       <Route path='/login' element={<ProtectsRoutes/>}>
