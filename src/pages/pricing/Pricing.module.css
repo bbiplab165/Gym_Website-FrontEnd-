@@ -34,11 +34,15 @@
     box-shadow: 0px 0px 10px 3px lightgray;
 }
 .p_table :hover{
-    background-color: blue;
+    background-color: #1A5F7A;
 }
 
 .p_table :hover h2{
     color: tomato;
+}
+.p_table :hover span{
+    /* color: tomato; */
+    color: whitesmoke;
 }
 .p_table :hover button{
     background-color: white;
