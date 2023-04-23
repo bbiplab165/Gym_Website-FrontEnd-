@@ -11,13 +11,13 @@ import Footer from '../footer/Footer';
 export default function AboutUs() {
     return (
         <>
-        <div className={Style.container}>
+        <section className={Style.container}>
             <Navbar />
             <div className={Style.content}>
                 <div className={Style.video_div}>
                     
                     <div className={Style.video}>
-                        <ReactPlayer controls="true" url='https://www.youtube.com/watch?v=-a4vyrtxr_U' width="40vw" height="40vh" />
+                        <ReactPlayer controls={true} url='https://www.youtube.com/watch?v=-a4vyrtxr_U' width="40vw" height="50vh" />
                     </div>
                     <div className={Style.video_content} >
                         <h1>Fitness Motivation</h1>
@@ -28,7 +28,7 @@ export default function AboutUs() {
                             This all-in-one pack is for everyone, so take action and you can have a website live VERY quickly.
                         </p>
                         <Button name='Learn More' /> 
-                    </div>
+                    </div> 
                 </div>
 
                 <div className={Style.about_div}>
@@ -42,13 +42,13 @@ export default function AboutUs() {
                         <Button name='Learn More' />
                     </div>
                     <div className={Style.video}>
-                        <ReactPlayer url="https://www.youtube.com/embed/X_9VoqR5ojM" width="40vw" height="40vh"  />
+                        <ReactPlayer controls={true} url="https://www.youtube.com/embed/X_9VoqR5ojM" width="40vw" height="60vh"  />
                     </div>
 
                 </div>
             </div>
             <Footer/>
-        </div>
+        </section>
         </>
     )
 }

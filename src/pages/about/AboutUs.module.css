@@ -20,7 +20,7 @@
   
   .video_div {
     display: flex;
-    flex-direction: row;
+    /* flex-direction: row; */
     justify-content: center;
     align-items: center;
     margin-bottom: 2rem;
@@ -28,6 +28,7 @@
     /* text-align: start; */
     
   }
+  
   .video_content{
     padding: 1em;
 
@@ -37,6 +38,7 @@
   }
   .video_content h1{
      color: red;
+     
   }
   .video_content p{
      color: whitesmoke;
@@ -53,6 +55,7 @@
   .video{
     display: flex;
     justify-content: center;
+    /* border: 2px red solid; */
   }
   
   
@@ -72,6 +75,10 @@
        
      
       flex-direction: column;
+      
+    }
+    .video{
+      width: auto;
       
     }
   

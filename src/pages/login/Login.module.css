@@ -18,7 +18,7 @@
 }
 
 
-h1 {
+.form h1 { 
     text-align: center;
     margin-bottom: 20px;
 }
@@ -34,12 +34,12 @@ h1 {
     margin-bottom: 20px;
 }
 
-label {
+.inputContainer label {
     font-weight: bold;
     margin-bottom: 5px;
 }
 
-input {
+.inputContainer input {
     padding: 10px;
     border-radius: 5px;
     border: none;
@@ -47,7 +47,7 @@ input {
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
 }
 
-span {
+.data span {
     color: red;
     margin-bottom: 10px;
 }
@@ -91,7 +91,7 @@ span {
         padding: 10px;
     }
 
-    input {
+    .inputContainer input {
         font-size: 16px;
     }
 

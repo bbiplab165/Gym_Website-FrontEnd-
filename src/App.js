@@ -7,7 +7,11 @@ import Registation from './pages/registration/Registration';
 import Training from './pages/training/Training';
 import Pricing from './pages/pricing/Pricing';
 import AboutUs from './pages/about/AboutUs';
-import ProtectsRoutes from './services/ProtectsRoutes';
+import LoginProtectsRoutes from './private/LoginProtectsRoutes';
+import WeekendPass from './service/subscription/WeekendPass';
+import MonthlyPass from './service/subscription/MonthlyPass';
+import YearlyPass from './service/subscription/YearlyPass';
+// import SubscribeProtectsRoutes from './private/SubscribeProtectsRoutes';
 
 
 function App() {
@@ -20,17 +24,28 @@ function App() {
       <Route path='/programs' element={<Classes/>} />
       <Route path='/training' element={<Training/>} />
       <Route path='/pricing' element={<Pricing/>} />
+      <Route path='/weekend' element={<WeekendPass/>} />
+      <Route path='/monthly' element={<MonthlyPass/>} />
+      <Route path='/yearly' element={<YearlyPass/>} />
       
 
-      {/* Protecting Routind =>> */}
+      {/* <Route path='/weekend' element={<SubscribeProtectsRoutes Component={WeekendPass}/>} />
+      <Route path='/monthly' element={<SubscribeProtectsRoutes Component={MonthlyPass}/>} />
+      <Route path='/yearly' element={<SubscribeProtectsRoutes Component={YearlyPass}/>} /> */}
 
-      <Route path='/registration' element={<ProtectsRoutes/>}>
+      {/* Protecting Routing for Login =>> */}
+
+      <Route path='/registration' element={<LoginProtectsRoutes/>}>
       <Route path='/registration' element={<Registation/>} />
       </Route>
       
-      <Route path='/login' element={<ProtectsRoutes/>}>
+      <Route path='/login' element={<LoginProtectsRoutes/>}>
       <Route path='/login' element={<Login/>} />
       </Route>
+
+       
+
+       
       
     </Routes>
     

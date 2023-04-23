@@ -6,6 +6,7 @@ import { Link, useNavigate } from 'react-router-dom';
 
 
 function LoginPage() {
+  
   const [email, setUserEmail] = useState('');
   const [password, setPassword] = useState('');
   const [loginError, setLoginError] = useState('');
@@ -25,10 +26,13 @@ function LoginPage() {
     const storedUsers = JSON.parse(localStorage.getItem('users')) || [];
 
     const existingUser = storedUsers.find(user => user.email === email && user.password === password);
-
+    // const isActiveStatus = storedUsers.find(user => user.isActive.login === false)
+    
     if (existingUser) {
       const confirmation = window.confirm('Login successfully! Click OK to go to Home page.');
       if (confirmation) {
+        // isActiveStatus.isActive.login = true;
+        // localStorage.setItem('users', JSON.stringify(isActiveStatus))
         localStorage.setItem('logged', true)
         navigate('/');
       }

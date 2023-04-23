@@ -141,3 +141,12 @@
         width: 30vw;
     }
 }
+
+@media screen and (max-width: 300px){
+    .div_1 button,.div_2 button,.div_3 button {
+        
+        width: 40vw;
+        font-size: smaller;
+    }
+    
+}

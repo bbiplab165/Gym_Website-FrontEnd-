@@ -6,6 +6,7 @@ import Style from './Registration.module.css'
 
 function RegistrationPage() {
   const navigate = useNavigate()
+  const [isActive, setIsActive] = useState(false)
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -39,7 +40,7 @@ function RegistrationPage() {
       setPW("Password must be min one Capital letter,min one digit & min 6 letter");
 
     } else {
-      setPW(''); 
+      setPW('');
     }
   }
 
@@ -64,11 +65,32 @@ function RegistrationPage() {
       return;
     }
 
-    const newUser = { username, email, password };
+    const newUser = {
+      isActive, username, email, password,
+      // isActive: {
+      //   login: false
+      // },
+      subscriptionData: {
+        isSubscribed: false,
+        subscriptionPlan: ''
+      }
+    };
 
     const updatedUsers = [...storedUsers, newUser];
+    //  const inputData = {
+    //   ...(username && {username}),
+    //   ...(email && {email}),
+    //   ...(password && {password}),
+    //   subscriptionData: {
+    //     isSubscribed: false,
+    //     subscriptionPlan: ''
+    //   }
+    //  }
+    //  const updatedUsers = [...storedUsers, inputData];
+    //  const noOfInputData = Object.keys(inputData).length
+    //  console.log(noOfInputData);
 
-    localStorage.setItem('users', JSON.stringify(updatedUsers));
+    // localStorage.setItem('users', JSON.stringify(updatedUsers));
 
     // Redirect to home page 
     if (EM === "Email is Not Valid" || PW === "password is Not Valid") {
@@ -77,6 +99,7 @@ function RegistrationPage() {
 
       const confirmation = window.confirm('Registration successfully Done! Click OK to go to Login page.');
       if (confirmation) {
+        localStorage.setItem('users', JSON.stringify(updatedUsers));
         setUsername('')
         setEmail('')
         setPassword('')
@@ -94,7 +117,7 @@ function RegistrationPage() {
       </div> */}
 
       <div className={Style.RegistrationPage}>
-       
+
 
         <form onSubmit={handleRegistration} className={Style.data}>
           <h1>Register </h1>
@@ -112,7 +135,7 @@ function RegistrationPage() {
           < span>Have already an account? <Link to="/login">Login here</Link>.</span>
 
         </form>
-        
+
       </div>
     </div>
   );
