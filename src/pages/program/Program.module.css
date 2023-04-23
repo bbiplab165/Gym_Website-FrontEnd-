@@ -31,7 +31,7 @@ height: 100%;
   align-items: center;
 }
 
-p {
+.textContent p { 
   /* margin-top: 10px; */
   /* margin-left: 5rem; */
   font-size: 18px;
