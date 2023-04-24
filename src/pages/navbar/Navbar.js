@@ -8,7 +8,7 @@ import { HiMenu, HiMenuAlt3 } from 'react-icons/hi';
 export default function Navbar() {
   const navigate = useNavigate()
   const [isMobile, setIsMobile] = useState(false)
-  const isLogin = JSON.parse(localStorage.getItem('logged')) || []
+  const isLogin = localStorage.getItem('logged') 
   // const userName = JSON.parse(localStorage.getItem('users'))
   // console.log(userName[0].username)
   // const isSubscribe = localStorage.getItem('subscribed')

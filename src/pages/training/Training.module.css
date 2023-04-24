@@ -27,6 +27,10 @@
     
     width: 70vw;
     margin: 0 10px;
+    
+  }
+  .container{
+    height: 45vh;
   }
   
   .carousel button{
