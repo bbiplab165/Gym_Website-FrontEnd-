@@ -23,25 +23,25 @@ function RegistrationPage() {
 
   function handleEmailChange(event) {
     setEmail(event.target.value);
-    const regEmail = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
-    if (regEmail.test(email)) {
-      setEM('');
-    } else if (!regEmail.test(email) && email !== "") {
-      setEM("Email is Not Valid");
-    }
+    // const regEmail = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
+    // if (regEmail.test(email)) {
+    //   setEM('');
+    // } else if (!regEmail.test(email) && email !== "") {
+    //   setEM("Email is Not Valid");
+    // }
   }
 
   function handlePasswordChange(event) {
     setPassword(event.target.value);
-    const pwRegEx = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).{6,20}$/;
-    if (pwRegEx.test(password)) {
-      setPW('');
-    } else if (!pwRegEx.test(password) && password !== " ") {
-      setPW("Password must be min one Capital letter,min one digit & min 6 letter");
+    // const pwRegEx = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).{6,20}$/;
+    // if (pwRegEx.test(password)) {
+    //   setPW('');
+    // } else if (!pwRegEx.test(password) && password !== " ") {
+    //   setPW("Password must have minimum one Capital letter, one Small letter & 6 digit long");
 
-    } else {
-      setPW('');
-    }
+    // } else {
+    //   setPW('');
+    // }
   }
 
   function handleConfirmPasswordChange(event) {
@@ -51,12 +51,29 @@ function RegistrationPage() {
   function handleRegistration(event) {
     event.preventDefault();
 
+    const pwRegEx = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).{6,20}$/;
+
+    if (!pwRegEx.test(password) && password !== " ") {
+      setPW("Password must have minimum one Capital letter, one Small letter & 6 digit long");
+      return;
+    }
+    else {
+      setPW('');
+    }
+    const regEmail = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
+    if (regEmail.test(email)) {
+      setEM('');
+    } else if (!regEmail.test(email) && email !== "") {
+      setEM("Please enter a valid Email address");
+      return;
+    }
+
     const storedUsers = JSON.parse(localStorage.getItem('users')) || [];
 
     const existingUser = storedUsers.find(user => user.username === username || user.email === email);
 
     if (existingUser) {
-      setRegistrationError('Username or email already exists');
+      setRegistrationError('User already exists Please login');
       return;
     }
 
@@ -67,9 +84,6 @@ function RegistrationPage() {
 
     const newUser = {
       isActive, username, email, password,
-      // isActive: {
-      //   login: false
-      // },
       subscriptionData: {
         isSubscribed: false,
         subscriptionPlan: ''
@@ -77,22 +91,7 @@ function RegistrationPage() {
     };
 
     const updatedUsers = [...storedUsers, newUser];
-    //  const inputData = {
-    //   ...(username && {username}),
-    //   ...(email && {email}),
-    //   ...(password && {password}),
-    //   subscriptionData: {
-    //     isSubscribed: false,
-    //     subscriptionPlan: ''
-    //   }
-    //  }
-    //  const updatedUsers = [...storedUsers, inputData];
-    //  const noOfInputData = Object.keys(inputData).length
-    //  console.log(noOfInputData);
 
-    // localStorage.setItem('users', JSON.stringify(updatedUsers));
-
-    // Redirect to home page 
     if (EM === "Email is Not Valid" || PW === "password is Not Valid") {
       alert("you have enter wrong details")
     } else {
@@ -112,9 +111,7 @@ function RegistrationPage() {
 
   return (
     <div className={Style.main_div}>
-      {/* <div className={Style.leftDiv}>
-        <img src='https://trumpwallpapers.com/wp-content/uploads/Workout-Wallpaper-01-1600-x-843.jpg' alt='wallpaper' />
-      </div> */}
+
 
       <div className={Style.RegistrationPage}>
 

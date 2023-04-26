@@ -8,39 +8,39 @@ export default function Pricing() {
     const navigate = useNavigate()
     const isLogin = localStorage.getItem("logged")
     const userData = JSON.parse(localStorage.getItem("users")) || []
-   
+
     function handleSubsription() {
 
-        
+
         const userDetails = userData.find(user => user.subscriptionData.isSubscribed === false || user.subscriptionData.subscriptionPlan === '')
         // console.log(userDetails.subscriptionData.subscriptionPlan);
         if (userDetails) {
-            const confirmation = window.confirm('Do You want to Subscribed our Weekend Pass')
-            if(confirmation){
-            userDetails.subscriptionData.isSubscribed = true;
-            userDetails.subscriptionData.subscriptionPlan = 'Weekend Pass'
-            localStorage.setItem('users', JSON.stringify(userData))
-            alert('Congratulation! You have subscribed our Weekend pass ')
+            const confirmation = window.confirm('Do You want to Subscribe our Weekend Pass')
+            if (confirmation) {
+                userDetails.subscriptionData.isSubscribed = true;
+                userDetails.subscriptionData.subscriptionPlan = 'Weekend Pass'
+                localStorage.setItem('users', JSON.stringify(userData))
+                alert('Congratulation! You have subscribed our Weekend pass ')
             }
-            
+
         } else {
-            
+
             alert('You have already Subscribed')
         }
-        
 
-        
+
+
     }
     function handleSubsriptionM() {
         const userDetails = userData.find(user => user.subscriptionData.subscriptionPlan === 'Weekend Pass' || user.subscriptionData.subscriptionPlan === '')
-        
+
         if (userDetails) {
-            const confirmation = window.confirm('Do You want to Subscribed our Monthly Pass')
-            if(confirmation){
-            userDetails.subscriptionData.isSubscribed = true;
-            userDetails.subscriptionData.subscriptionPlan = 'Monthly Pass'
-            localStorage.setItem('users', JSON.stringify(userData))
-            alert('Congratulation! You have subscribed our Monthly pass ')
+            const confirmation = window.confirm('Do You want to Subscribe our Monthly Pass')
+            if (confirmation) {
+                userDetails.subscriptionData.isSubscribed = true;
+                userDetails.subscriptionData.subscriptionPlan = 'Monthly Pass'
+                localStorage.setItem('users', JSON.stringify(userData))
+                alert('Congratulation! You have subscribed our Monthly pass ')
             }
         } else {
             alert('You have already Subscribed')
@@ -48,14 +48,14 @@ export default function Pricing() {
     }
     function handleSubsriptionY() {
         const userDetails = userData.find(user => user.subscriptionData.subscriptionPlan === 'Weekend Pass' || user.subscriptionData.subscriptionPlan === 'Monthly Pass' || user.subscriptionData.subscriptionPlan === '')
-        
+
         if (userDetails) {
-            const confirmation = window.confirm('Do You want to Subscribed our Yearly Pass')
-            if(confirmation){
-            userDetails.subscriptionData.isSubscribed = true;
-            userDetails.subscriptionData.subscriptionPlan = 'Yearly Pass'
-            localStorage.setItem('users', JSON.stringify(userData))
-            alert('Congratulation! You have subscribed our Yearly pass ')
+            const confirmation = window.confirm('Do You want to Subscribe our Yearly Pass')
+            if (confirmation) {
+                userDetails.subscriptionData.isSubscribed = true;
+                userDetails.subscriptionData.subscriptionPlan = 'Yearly Pass'
+                localStorage.setItem('users', JSON.stringify(userData))
+                alert('Congratulation! You have subscribed our Yearly pass ')
             }
         } else {
             alert('You have already Subscribed')

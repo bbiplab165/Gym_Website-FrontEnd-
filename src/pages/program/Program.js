@@ -42,15 +42,13 @@ const images = [
 ];
 
 const Program = () => {
-  // const [currentImage, setCurrentImage] = useState(images[0]);
+  
   const [index, setIndex] = useState(0)
   const length = images.length
 
   useEffect(() => {
     const interval = setInterval(() => {
-      // const currentIndex = images.findIndex((image) => image === currentImage);
-      // const nextIndex = (currentIndex + 1) % images.length;
-      // setCurrentImage(images[nextIndex]);
+      
       setIndex(index < length - 1 ? index + 1 : 0)
     }, 2000);
     return () => clearInterval(interval);
@@ -61,7 +59,6 @@ const Program = () => {
     <div >
       <Navbar />
       <div className={Style.container}>
-        {/* <img src={currentImage.url} alt={currentImage.text} /> */}
         <div className={Style.img_div}>
           <img src={images[index].url} alt='hello' />
         </div>

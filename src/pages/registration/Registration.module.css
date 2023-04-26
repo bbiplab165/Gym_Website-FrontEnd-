@@ -1,6 +1,7 @@
-.main_div{
+.main_div {
     height: 100%;
 }
+
 .RegistrationPage {
     display: flex;
     justify-content: center;
@@ -9,7 +10,7 @@
     background-size: cover;
     background-position: center;
     height: 120vh;
-    
+
 }
 
 .data {
@@ -24,11 +25,12 @@
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }
- .data p{
+
+.data p {
     color: red;
-    font-size: small ;
+    font-size: small;
     margin-top: -10px;
-    
+
 }
 
 .data h1 {
@@ -60,7 +62,7 @@
     cursor: pointer;
     margin-bottom: 20px;
     font-size: 1rem;
-    width: 20vw;
+    width: 100%;
 
 }
 
@@ -68,8 +70,9 @@
     color: red;
     /* margin-bottom: 10px; */
 }
+
 button:hover {
-    background-color:#008B8B;;
+    background-color: #008B8B;
 }
 
 button:active {
@@ -78,10 +81,10 @@ button:active {
 
 
 @media screen and (max-width: 768px) {
-    
+
     .data {
         padding: 20px;
-       
+
         width: 40vw;
     }
 
@@ -112,7 +115,8 @@ button:active {
         padding: 10px;
         width: 65vw;
     }
-    .data p{
+
+    .data p {
         margin-top: -15px;
         padding: 0;
         /* border: red 2px solid; */

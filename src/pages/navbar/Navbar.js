@@ -8,65 +8,46 @@ import { HiMenu, HiMenuAlt3 } from 'react-icons/hi';
 export default function Navbar() {
   const navigate = useNavigate()
   const [isMobile, setIsMobile] = useState(false)
-  const isLogin = localStorage.getItem('logged') 
-  // const userName = JSON.parse(localStorage.getItem('users'))
-  // console.log(userName[0].username)
-  // const isSubscribe = localStorage.getItem('subscribed')
-  // const isLogout = JSON.parse(localStorage.getItem('users')) || []
-  
-  
+  const isLogin = localStorage.getItem('logged')
+
+
   function handleLogout() {
-    // const logStatus = isLogout.find(user => user.isActive.login === true)
-    // console.log((logStatus));
-    
-      
-      localStorage.removeItem('logged')
-      navigate('/login')
-     
-    
-      // logStatus.isActive.login = false
-      // localStorage.setItem('users', JSON.stringify(isLogout))
-    // localStorage.removeItem('logged')
-    // navigate('/login')
-    
+
+    localStorage.removeItem('logged')
+    navigate('/login')
 
   }
   return (
-  <>
-    <div className={Style.main_Navdiv}>
-      {/* <div className={Style.userlogo}>
-        <p>{isSubscribe? 'Weekend Pass' : ''}</p> 
-        
-        </div> */}
-      <div className={Style.logo}>
+    <>
+      <div className={Style.main_Navdiv}>
 
-        <Link to='/' style={{ textDecoration: 'none' }}> <h1>GYM  </h1> </Link>
-      </div>
-      {/* <div className={isMobile ? Style.icon : Style.hideIcon}>
-        <h1> NGE<span>GYM</span>💪 </h1>
-      </div> */}
-      <div >
-        <ul className={Style.link_div} >
+        <div className={Style.logo}>
 
-          <Link to='/aboutUs' style={{ textDecoration: 'none' }} ><li>About Us</li></Link>
-          <Link to='/programs' style={{ textDecoration: 'none' }}><li>Program</li></Link>
-          <Link to='/training' style={{ textDecoration: 'none' }}><li>Training</li></Link>
-          <Link to='/pricing' style={{ textDecoration: 'none' }}><li>Pricing</li></Link>
+          <Link to='/' style={{ textDecoration: 'none' }}> <h1>GYM  </h1> </Link>
+        </div>
 
-        </ul>
-      </div>
-      <div className={Style.btn_div} >
-        {isLogin ? <button className={Style.btn} onClick={handleLogout}>Logout</button> : <button className={Style.btn} onClick={() => navigate('/login')}>Login</button>}
-      </div>
-      <div className={Style.menuIcon} >
-        {isMobile ? <HiMenuAlt3 onClick={() => setIsMobile(false)} /> : <HiMenu onClick={() => setIsMobile(true)} />}
- 
+        <div >
+          <ul className={Style.link_div} >
+
+            <Link to='/aboutUs' style={{ textDecoration: 'none' }} ><li>About Us</li></Link>
+            <Link to='/programs' style={{ textDecoration: 'none' }}><li>Program</li></Link>
+            <Link to='/training' style={{ textDecoration: 'none' }}><li>Training</li></Link>
+            <Link to='/pricing' style={{ textDecoration: 'none' }}><li>Pricing</li></Link>
+
+          </ul>
+        </div>
+        <div className={Style.btn_div} >
+          {isLogin ? <button className={Style.btn} onClick={handleLogout}>Logout</button> : <button className={Style.btn} onClick={() => navigate('/login')}>Login</button>}
+        </div>
+        <div className={Style.menuIcon} >
+          {isMobile ? <HiMenuAlt3 onClick={() => setIsMobile(false)} /> : <HiMenu onClick={() => setIsMobile(true)} />}
+
+
+        </div>
+
 
       </div>
-      
-
-    </div>
-    <div className={isMobile ? Style.mobileLink : Style.hideIcon}>
+      <div className={isMobile ? Style.mobileLink : Style.hideIcon}>
         <div>
           <Link to='/' style={{ textDecoration: 'none' }}><p>Home</p></Link>
           <Link to='/aboutUs' style={{ textDecoration: 'none' }}><p>AboutUs</p></Link>
